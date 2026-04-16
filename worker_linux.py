@@ -503,8 +503,7 @@ class TaskProcessor:
                     parsed_leads.append({"id": 0, "email": ld})
 
             # Start browser
-            await engine.start(headless=settings.get("headless", True))
-
+            await engine.start(headless=True)
             # Login
             logged_in = await engine.login_microsoft(
                 account["email"],
